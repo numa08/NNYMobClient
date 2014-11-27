@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.3.1)
+  - NNYMobClient (0.1.0)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Expecta
+  - NNYMobClient (from `../`)
+  - Specta (~> 0.2.1)
+
+EXTERNAL SOURCES:
+  NNYMobClient:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  NNYMobClient: 6f745ecd65df7bcf0adea9f68b38e51ad97e2e88
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
+
+COCOAPODS: 0.34.4
