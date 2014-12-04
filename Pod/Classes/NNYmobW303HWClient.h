@@ -2,7 +2,7 @@
 //  NNYmobW303HWClient.h
 //  Pods
 //
-//  Created by 船曳崇也 on 2014/12/04.
+//  Created by numa08 on 2014/12/04.
 //
 //
 
