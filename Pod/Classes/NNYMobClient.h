@@ -12,7 +12,9 @@
 // Supported Clients
 static NSString *const NNYMobW303HW = @"W303H";
 @protocol NNYMobClient <NSObject>
+@property (nonatomic, copy) NSString *sessionID;
 - (NSString*)requestSessionIDWithError:(NSError**)error;
+- (NSInteger)requestSignalStrengthWithError:(NSError**)error;
 @end
 
 @interface NNYMobClient : NSObject

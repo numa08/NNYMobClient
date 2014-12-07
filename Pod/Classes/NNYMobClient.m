@@ -14,7 +14,7 @@
 + (id<NNYMobClient>)clientForName:(NSString *)name withIPAddress:(NSString *)ipaddress
 {
     if ([name isEqualToString:NNYMobW303HW]) {
-        return [[NNYmobW303HWClient alloc] initWithIPAddress:ipaddress];
+        return (id<NNYMobClient>)[[NNYmobW303HWClient alloc] initWithIPAddress:ipaddress];
     }
     return nil;
 }
