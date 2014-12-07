@@ -14,5 +14,20 @@ describe(@"Create Client", ^{
         NNYMobClient *client = [NNYMobClient clientForName:NNYMobW303HW withIPAddress:@"192.168.100.1"];
         expect(client.name).to.equal(NNYMobW303HW);
     });
+    
+    it(@"conform procol", ^{
+        NSObject *client = [NNYMobClient clientForName:NNYMobW303HW withIPAddress:@"192.168.100.1"];
+        expect([client conformsToProtocol:@protocol(NNYMobClient)]).to.equal(YES);
+    });
 });
+
+describe(@"GET session ID", ^{
+    it(@"get session id", ^{
+        id<NNYMobClient> client = [NNYMobClient clientForName:NNYMobW303HW withIPAddress:@"192.168.128.1"];
+        NSError *error = nil;
+        NSString *sessionID = [client requestSessionIDWithError:&error];
+        NSLog(@"session ID is %@", sessionID);
+    });
+});
+
 SpecEnd

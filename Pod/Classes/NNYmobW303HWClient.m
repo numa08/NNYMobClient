@@ -7,8 +7,9 @@
 //
 
 #import "NNYmobW303HWClient.h"
+#import "NNYmobW303HWClient+RequestSessionID.h"
+
 @interface NNYmobW303HWClient()
-@property (nonatomic, copy) NSString *ipaddress;
 @end
 
 @implementation NNYmobW303HWClient
@@ -27,4 +28,21 @@
     return NNYMobW303HW;
 }
 
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol
+{
+    if (aProtocol == @protocol(NNYMobClient)) {
+        return YES;
+    }
+    return NO;
+}
+
+# pragma mark - Private Methods
+- (NSURL*)targetURL
+{
+    NSString *scheme = @"http";
+    NSString *host = self.ipaddress;
+    NSString *path = @"/";
+    NSURL *url = [[NSURL alloc] initWithScheme:scheme host:host path:path];
+    return url;
+}
 @end
