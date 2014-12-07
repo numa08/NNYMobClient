@@ -11,7 +11,7 @@
 #import "NNYmobW303HWClient.h"
 
 @implementation NNYMobClient
-+ (id)clientForName:(NSString *)name withIPAddress:(NSString *)ipaddress
++ (id<NNYMobClient>)clientForName:(NSString *)name withIPAddress:(NSString *)ipaddress
 {
     if ([name isEqualToString:NNYMobW303HW]) {
         return [[NNYmobW303HWClient alloc] initWithIPAddress:ipaddress];

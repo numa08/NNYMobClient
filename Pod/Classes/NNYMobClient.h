@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NNYMobClientError.h"
 
 // Supported Clients
 static NSString *const NNYMobW303HW = @"W303H";
+@protocol NNYMobClient <NSObject>
+- (NSString*)requestSessionIDWithError:(NSError**)error;
+@end
 
 @interface NNYMobClient : NSObject
-+ (id)clientForName:(NSString*)name withIPAddress:(NSString*)ipaddress;
++ (id<NNYMobClient>)clientForName:(NSString*)name withIPAddress:(NSString*)ipaddress;
 @property (nonatomic, readonly) NSString *name;
 @end
