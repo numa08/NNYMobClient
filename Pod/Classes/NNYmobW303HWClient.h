@@ -10,6 +10,7 @@
 
 @interface NNYmobW303HWClient : NNYMobClient
 - (id)initWithIPAddress:(NSString*)ipaddress;
+@property (nonatomic, copy) NSString *sessionID;
 @property (nonatomic, copy) NSString *ipaddress;
 @property (nonatomic, readonly) NSURL *targetURL;
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00D20AB207A2523BC119A55A /* libPods-NNYMobClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EEA16651B1739FCA40884F /* libPods-NNYMobClient.a */; };
+		241EA9A41A373ABF00568610 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 241EA9A31A373ABF00568610 /* libxml2.dylib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		241EA93C1A30A1F500568610 /* libPods-NNYMobClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-NNYMobClient.a"; path = "Pods/build/Debug-iphoneos/libPods-NNYMobClient.a"; sourceTree = "<group>"; };
+		241EA9A31A373ABF00568610 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		2664B7B9EC7FFDC1F2D66184 /* NNYMobClient.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NNYMobClient.podspec; path = ../NNYMobClient.podspec; sourceTree = "<group>"; };
 		43C48F74A592A97C90975300 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5B19D65E8D79C76AC0BB3501 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241EA9A41A373ABF00568610 /* libxml2.dylib in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				241EA9A31A373ABF00568610 /* libxml2.dylib */,
 				241EA93C1A30A1F500568610 /* libPods-NNYMobClient.a */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
@@ -503,6 +507,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NNYMobClient/NNYMobClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Expecta\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/NNYMobClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Specta\"",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "NNYMobClient/NNYMobClient-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -517,6 +530,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NNYMobClient/NNYMobClient-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Expecta\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/NNYMobClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Specta\"",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "NNYMobClient/NNYMobClient-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
