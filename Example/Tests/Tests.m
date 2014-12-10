@@ -33,12 +33,18 @@ describe(@"Request", ^{
         id<NNYMobClient> client = [NNYMobClient clientForName:NNYMobW303HW withIPAddress:@"192.168.128.1"];
         NSError *error = nil;
         NSString *sessionID = [client requestSessionIDWithError:&error];
-//        expect(error).toNot.beNil;
         client.sessionID = sessionID;
         NSInteger signalStrength = [client requestSignalStrengthWithError:&error];
-//        expect(error).toNot.beNil;
-//        expect(signalStrength).toNot.equal(0);
         NSLog(@"signal strength is %@", @(signalStrength));
+    });
+    
+    it(@"can login", ^{
+        id<NNYMobClient> client = [NNYMobClient clientForName:NNYMobW303HW withIPAddress:@"192.168.128.1"];
+        NSError *error = nil;
+        NSString *sessionID = [client requestSessionIDWithError:&error];
+        client.sessionID = sessionID;
+        NSString *loginSessionID = [client loginSessionIDWithUserName:@"admin" withPassword:@"admin" withError:&error];
+        NSLog(@"login session id %@", loginSessionID);
     });
 });
 

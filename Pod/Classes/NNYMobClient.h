@@ -15,6 +15,7 @@ static NSString *const NNYMobW303HW = @"W303H";
 @property (nonatomic, copy) NSString *sessionID;
 - (NSString*)requestSessionIDWithError:(NSError**)error;
 - (NSInteger)requestSignalStrengthWithError:(NSError**)error;
+- (NSString*)loginSessionIDWithUserName:(NSString*)userName withPassword:(NSString*)password withError:(NSError**)error;
 @end
 
 @interface NNYMobClient : NSObject

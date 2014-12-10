@@ -8,6 +8,7 @@
 
 #import "NNYmobW303HWClient.h"
 #import "NNYmobW303HWClient+RequestSessionID.h"
+#import "NNYmobW303HWClient+NNYmobW303Login.h"
 
 @interface NNYmobW303HWClient()
 @end
