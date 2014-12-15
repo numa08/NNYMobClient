@@ -2,6 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'NNYMobClient', :exclusive => true do
   pod "NNYMobClient", :path => "../"
+  pod "KissXML"
 end
 
 target 'Tests', :exclusive => true do
