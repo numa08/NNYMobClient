@@ -514,7 +514,7 @@
 					"\"${PODS_ROOT}/Headers/Public/NNYMobClient\"",
 					"\"${PODS_ROOT}/Headers/Public/Specta\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
-					/usr/include/libxml2,
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "NNYMobClient/NNYMobClient-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,7 +537,7 @@
 					"\"${PODS_ROOT}/Headers/Public/NNYMobClient\"",
 					"\"${PODS_ROOT}/Headers/Public/Specta\"",
 					"\"$(SDKROOT)/usr/include/libxml2\"",
-					/usr/include/libxml2,
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "NNYMobClient/NNYMobClient-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";

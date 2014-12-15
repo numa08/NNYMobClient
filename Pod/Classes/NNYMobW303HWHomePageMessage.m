@@ -29,7 +29,7 @@
     return self;
 }
 
-- (NSDictionary*)messageForRequest
+- (NSDictionary*)messageForRequestHead
 {
     NSURL *targetURL = [self.targetURL URLByAppendingPathComponent:NNYMobW303HomePagePath];
     NSDictionary *retval = @{NNYMobClientMessageSessionID : self.sessionID,

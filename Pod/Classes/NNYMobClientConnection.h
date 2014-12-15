@@ -11,7 +11,11 @@
 static NSString *const NNYMobClientMessageURL = @"NNYMobClientMessageURL";
 static NSString *const NNYMobClientMessageSessionID = @"NNYMobClientMessageSessionID";
 
+static NSString *const NNYMobClientContentType = @"NNYMobClientConentType";
+static NSString *const NNYMobClientBody = @"NNYMobClientBody";
 @protocol NNYMobClientMessage <NSObject>
+- (NSDictionary*)messageForRequestHead;
+@optional
 - (NSDictionary*)messageForRequest;
 @end
 

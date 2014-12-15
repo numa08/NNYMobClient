@@ -14,7 +14,7 @@ static NSString *const NNYMobClientCookieSessionID = @"SessionID";
 @implementation NNYMobClientConnection
 - (NSData*)requestForMessage:(id<NNYMobClientMessage>)message error:(NSError**)error
 {
-    NSDictionary *params = [message messageForRequest];
+    NSDictionary *params = [message messageForRequestHead];
     NSURL *url = params[NNYMobClientMessageURL];
     NSString *sessionID = params[NNYMobClientMessageSessionID];
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:@{NSHTTPCookiePath : @"/",
@@ -23,6 +23,12 @@ static NSString *const NNYMobClientCookieSessionID = @"SessionID";
                                                                 NSHTTPCookieDomain : url.host}];
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    if ([message respondsToSelector:@selector(messageForRequest)]) {
+        request.HTTPMethod = @"POST";
+        NSDictionary *requestData = [message messageForRequest];
+        [request setValue:requestData[NNYMobClientContentType] forHTTPHeaderField:@"Content-Type"];
+        request.HTTPBody = requestData[NNYMobClientBody];
+    }
     NSDictionary *header = [NSHTTPCookie requestHeaderFieldsWithCookies:@[cookie]];
     request.allHTTPHeaderFields = header;
     

@@ -10,5 +10,4 @@
 
 @interface NNYmobW303HWClient (NNYmobW303Login)
 - (NSString*)loginSessionIDWithUserName:(NSString*)userName withPassword:(NSString*)password withError:(NSError**)error;
-- (NSString*)requestCSRFTokenWithError:(NSError**)error;
 @end

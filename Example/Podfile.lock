@@ -1,7 +1,9 @@
 PODS:
+  - Base64nl (1.2)
   - Expecta (0.3.1)
   - KissXML (5.0)
   - NNYMobClient (0.1.0):
+    - Base64nl (~> 1.2)
     - KissXML (~> 5.0)
   - Specta (0.2.1)
 
@@ -15,9 +17,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  Base64nl: 98b890ea8e2131561ea6aa0f2039ef82c35d47bf
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   KissXML: e537c38b18ede903ee6de45953a9bd86c131ebe9
-  NNYMobClient: fd863ceab483d2b88f62f9b88836c2b60d38c714
+  NNYMobClient: 18def238c9e5f63b5080d01ce40b9cccb671b8c1
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
 
 COCOAPODS: 0.34.4

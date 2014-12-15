@@ -8,11 +8,11 @@
 
 #import "NNYmobW303HWClient+NNYmobW303Login.h"
 
-#import "HTMLParser.h"
-#import "HTMLNode.h"
 #import <KissXML/DDXML.h>
+#import "HTMLParser.h"
 
 #import "NNYMobW303HWHomePageMessage.h"
+#import "NNYMobW303HWLoginMessage.h"
 #import "NNYMobClientConnection.h"
 
 @implementation NNYmobW303HWClient (NNYmobW303Login)
@@ -27,6 +27,10 @@
             @throw myError;
         }
         NSLog(@"token %@", csrfToken);
+        loginSessionID = [self requestLoginSessionIDWithUserName:userName withPassword:password withCSRFToken:csrfToken withError:&myError];
+        if (myError) {
+            @throw myError;
+        }
     }
     @catch (NSError *e) {
         if (error) {
@@ -63,5 +67,30 @@
         }
     }
     return csrfToken;
+}
+
+- (NSString*)requestLoginSessionIDWithUserName:(NSString*)userName withPassword:(NSString*)password withCSRFToken:(NSString*)token withError:(NSError**)error
+{
+    NSString *sessionId = nil;
+    NSError *myError = nil;
+    
+    NNYMobW303HWLoginMessage *loginMessage = [[NNYMobW303HWLoginMessage alloc] initWithSessionID:self.sessionID withTargetURL:self.targetURL];
+    loginMessage.userName = userName;
+    loginMessage.password = password;
+    loginMessage.csrfToken = token;
+    NNYMobClientConnection *connection = [[NNYMobClientConnection alloc] init];
+    @try {
+        NSData *response = [connection requestForMessage:loginMessage error:&myError];
+        if (myError) {
+            @throw myError;
+        }
+        NSLog(@"response %@", [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    }
+    @catch (NSError *e) {
+        if (error) {
+            *error = e;
+        }
+    }
+    return @"";
 }
 @end
