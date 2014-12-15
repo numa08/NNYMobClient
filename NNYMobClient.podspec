@@ -10,12 +10,12 @@
 Pod::Spec.new do |s|
   s.name             = "NNYMobClient"
   s.version          = "0.1.0"
-  s.summary          = "A short description of NNYMobClient."
+  s.summary          = "NNYMobClient is client for Y!Mobile"
   s.description      = <<-DESC
-                       An optional longer description of NNYMobClient
+                       NNYMobClient is client library for Y!Mobile's wifi router.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       ## features
+                         - can get signal strength
                        DESC
   s.homepage         = "https://github.com/numa08/NNYMobClient"
   s.license          = 'MIT'
