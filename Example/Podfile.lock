@@ -1,12 +1,10 @@
 PODS:
   - Expecta (0.3.1)
-  - KissXML (5.0)
   - NNYMobClient (0.1.0)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - Expecta
-  - KissXML
   - NNYMobClient (from `../`)
   - Specta (~> 0.2.1)
 
@@ -16,8 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  KissXML: e537c38b18ede903ee6de45953a9bd86c131ebe9
-  NNYMobClient: ec416b4749f9c7d49d0eebd03797485972561aea
+  NNYMobClient: aed3b7dd173f1e42a0665fc5bc7f8426027679d7
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
 
 COCOAPODS: 0.34.4

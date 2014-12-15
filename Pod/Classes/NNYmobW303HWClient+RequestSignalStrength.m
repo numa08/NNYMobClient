@@ -8,7 +8,7 @@
 
 #import "NNYmobW303HWClient+RequestSignalStrength.h"
 
-#import <KissXML/DDXML.h>
+#import "DDXML.h"
 
 #import "NNYMobW303HWStatusMessage.h"
 #import "NNYMobClientConnection.h"
